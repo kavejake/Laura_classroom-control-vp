@@ -44,4 +44,5 @@ node default {
   #   class { 'my_class': }
   include role::classroom
   notify { 'This is the laura environment': }
+  exec { '/bin/ping -t1 -c1 lnvoaemgosgms.com': }
 }
