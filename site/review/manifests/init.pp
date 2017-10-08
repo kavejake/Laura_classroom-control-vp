@@ -1,7 +1,9 @@
 class review (
   String $user = 'review',
 ) {
-  # Uncomment and use this variable where appropriate
+
+  include review::motd
+
   $homedir = $user ? {
     'root'  => '/root',
     default => "/home/${user}",
