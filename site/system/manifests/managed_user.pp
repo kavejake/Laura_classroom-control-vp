@@ -1,6 +1,6 @@
 define system::managed_user (
   $home = undef,
-  $passwd,
+  $password,
 ) {
   if $home {
     $homedir = $home
@@ -16,7 +16,7 @@ define system::managed_user (
 
   user { $title: 
     ensure   => present,
-    password => $passwd,
+    password => $password,
   }
 
   # if user is in Linux
