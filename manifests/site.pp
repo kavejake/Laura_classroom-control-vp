@@ -43,5 +43,6 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
-  notify { 'This is the laura environment': }
+  notify { "Root's home directory is ${homedir('root')}": }
+  notify { "Test's home directory is ${homedir('test')}": }
 }
