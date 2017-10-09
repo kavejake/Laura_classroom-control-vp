@@ -24,7 +24,7 @@ define system::managed_user (
     file { "bashrc_${title}":
       ensure  => file,
       path    => "${homedir}/.bashrc",
-      content => epp('templates/bashrc.epp'),
+      content => epp('system/bashrc.epp'),
     }
   }
 
